@@ -39,7 +39,7 @@ const LoginPage = () => {
 	return (
 		<main className="main-section">
 			<div className="flex flex-col justify-center min-h-full px-6 py-12 h-svh lg:px-8">
-				<div className="p-5 mx-auto border border-gray-300 border-solid rounded-lg w-96 bg-gradient-to-br from-[#242118] to-[#242118]">
+				<div className="p-5 mx-auto border border-gray-300 border-solid rounded-lg w-full md:w-96 bg-gradient-to-br from-[#242118] to-[#242118]">
 					<div className="sm:mx-auto sm:w-full sm:max-w-sm">
 						<h1 className="text-2xl font-bold leading-9 tracking-tight text-center">D - Food</h1>
 						<hr className="line-hr" />

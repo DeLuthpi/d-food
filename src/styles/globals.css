@@ -40,14 +40,6 @@ hr {
 	margin-top: 0;
 }
 
-.main-section {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	min-height: 100vh;
-}
-
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
