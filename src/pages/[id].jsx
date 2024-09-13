@@ -21,14 +21,15 @@ const DetailPage = () => {
 			});
 	};
 
-	const date = new Date(item?.createdAt);
-
 	useEffect(() => {
-		if (router.query.id) getData();
+		const token = getCookie("token");
+		if (token) if (router.query.id) getData();
 	}, [router.query.id]);
 
 	return (
 		<main className="main-section">
+			<h1 className="mt-10 text-2xl text-center">Detail Menu</h1>
+			<hr className="line-hr" />
 			<div className="h-[100vh] pt-6">
 				<div className="max-w-2xl mx-auto mt-6 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
 					<div className="hidden overflow-hidden rounded-lg aspect-h-4 aspect-w-3 lg:block">

@@ -2,10 +2,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { getCookie } from "cookies-next";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const HomePage = () => {
 	const token = getCookie("token");
-
+	const router = useRouter();
 	const [data, setData] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -23,7 +24,7 @@ const HomePage = () => {
 				setLoading(false);
 			})
 			.catch((err) => {
-				console.log(err);
+				// console.log(err);
 			})
 			.finally(() => {
 				setLoading(false);
@@ -38,9 +39,9 @@ const HomePage = () => {
 
 	return (
 		<main className="main-section">
-			<h1 className="mt-10 text-2xl text-center">D&apos;Food - Menu List</h1>
+			<h1 className="mt-10 text-2xl text-center">Menu List</h1>
 			<hr className="line-hr" />
-			<div className="grid grid-cols-1 mx-6 mt-6 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+			<div className="grid grid-cols-1 mx-6 mt-6 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
 				{data.map((item) => (
 					<div className="relative group" key={item?.id}>
 						<div className="w-full overflow-hidden bg-gray-200 rounded-t-md aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
